@@ -1,0 +1,58 @@
+$small-screen-width: 20em;
+$large-screen-width: 60em;
+
+$small-font-size: 1em;
+$large-font-size: 2em;
+$line-height: 1.5;
+
+$lightest-color: rgba(255, 250, 245, 1);
+$light-color: rgba(125, 120, 175, 1);
+$dark-color: rgba(70, 75, 120, 1);
+
+body {
+  background-color: $lightest-color;
+  min-width: $small-screen-width;
+  width: 100%;
+  margin: 0;
+}
+
+section {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $large-screen-width) {
+    padding: $small-font-size * $line-height + 0.5em;
+  }
+
+  @media screen and (min-width: $large-screen-width) {
+    max-width: $large-screen-width;
+    padding: $large-font-size * $line-height + 0.5em;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $light-color;
+  font-family: sans-serif;
+  font-weight: 600;
+
+  line-height: $line-height;
+  margin: 0 0 ($line-height + em) 0;
+
+  @media screen and (max-width: $large-screen-width) {
+    font-size: $small-font-size;
+  }
+
+  @media screen and (min-width: $large-screen-width) {
+    font-size: $large-font-size;
+  }
+}
+
+a {
+  color: $dark-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $dark-color;
+  }
+}

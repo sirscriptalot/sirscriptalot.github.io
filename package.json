@@ -1,0 +1,15 @@
+{
+  "name": "sirscriptalot.github.io",
+  "version": "0.0.0",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass --no-source-map index.scss index.css",
+    "clean": "rm index.css",
+    "watch": "sass --no-source-map --watch index.scss index.css"
+  },
+  "author": "sirscriptalot",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}

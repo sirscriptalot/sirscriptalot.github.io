@@ -1,14 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="all.css">
+    <link href="index.css" rel="stylesheet">
 
-    <script src="all.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sir Script-a-Lot</title>
   </head>
   <body>
-    <h1>Sir Script-A-Lot</h1>
+    <section>
+      <h1>
+        My name is Steve, I am a programmer located in Grand Rapids, Michigan.
+      </h1>
+
+      <p>
+        Online, you can find me on <a id="g" href="https://github.com/sirscriptalot">[g]ithub</a>, <a id="l" href="https://www.linkedin.com/in/smweiss">[l]inkedin</a>, and a younger version of me still exists on <a id="t" href="https://twitter.com/notmymiddlename">[t]witter</a>.
+      </p>
+
+      <p>
+        Offline, you'll find me frequenting concerts, playing guitar on the edge of my bed, and running alongside my lovely wife Tara and crazy dog Ringo.
+      </p>
+    </section>
 
     <script>
-      main();
+      const keypressHandler = e => {
+        const el = document.getElementById(e.key);
+
+        if (el) {
+          el.click();
+        }
+      };
+
+      document.addEventListener("keypress", keypressHandler);
     </script>
   </body>
 </html>
